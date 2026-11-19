@@ -9,23 +9,15 @@
 <body>
 <header class="masthead">
   <div class="masthead-inner">
-    <div>
-      <p class="eyebrow">Grand Theft Auto VI &middot; PlayStation 5</p>
+    <div class="masthead-title">
+      <p class="eyebrow">Grand Theft Auto VI &middot; PlayStation 5 &middot; Launched 19 Nov 2026</p>
       <h1>Leonida Atlas</h1>
-      <p class="subtitle">The offline guide and tracker for all 55 trophies — official names, descriptions and grades, a cited guide to each, a six-stage roadmap to the Platinum, and the missable warnings.</p>
+      <p class="subtitle">The offline guide and tracker for all 55 GTA VI trophies — cited guides, roadmap, missable warnings.</p>
     </div>
-    <div class="totals" aria-label="Trophy list totals">
-      <div class="total"><strong>55</strong><span>trophies</span></div>
-      <div class="total"><strong>1</strong><span>platinum</span></div>
-      <div class="total"><strong>2</strong><span>gold</span></div>
-      <div class="total"><strong>6</strong><span>silver</span></div>
-      <div class="total"><strong>46</strong><span>bronze</span></div>
-      <div class="total"><strong>28</strong><span>hidden</span></div>
-      <div class="total"><strong>0</strong><span>online</span></div>
-    </div>
+    <p class="audit-strip" aria-label="Guide audit">55/55 trophies &middot; 1P 2G 6S 46B &middot; 55 guides &middot; 127 cited sources &middot; 14 missable &middot; 0 online</p>
   </div>
   <div class="progress-wrap">
-    <div class="progress-line"><span id="progressText">0 of 55 earned — 0%</span><span id="progressDetail">Platinum: not yet</span></div>
+    <div class="progress-line"><span id="progressText">0 of 55 earned — 0%</span><span class="saved-inline" id="savedNote">Saves automatically in this browser</span><span id="progressDetail">Platinum: not yet</span></div>
     <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="55" aria-valuenow="0" id="progressBar"><div class="progress-fill" id="progressFill"></div></div>
   </div>
 </header>
@@ -50,14 +42,13 @@
           <option value="earned">Earned</option>
         </select>
       </label>
-      <label class="spoiler-box"><input id="spoiler" type="checkbox"> <span>Hide spoilers — story trophies stay hidden until earned</span></label>
-    </div>
-    <div class="toolbar-row kind-row" id="kindChips" role="group" aria-label="Filter by kind"></div>
-    <div class="toolbar-row actions-row">
+      <label class="spoiler-box" title="Story trophies stay hidden until earned"><input id="spoiler" type="checkbox"> <span>Hide spoilers</span></label>
       <button id="exportBtn" type="button">Export progress</button>
       <label class="import-btn">Import progress <input id="importFile" type="file" accept="application/json,.json"></label>
-      <button id="resetBtn" type="button" class="quiet">Reset progress</button>
-      <span class="saved-note" id="savedNote">Progress saves in this browser automatically.</span>
+      <button id="resetBtn" type="button" class="quiet">Reset</button>
+    </div>
+    <div class="toolbar-row kind-row">
+      <span id="kindChips" class="kind-chips" role="group" aria-label="Filter by kind"></span>
     </div>
   </section>
 
@@ -93,7 +84,7 @@
         <div class="detail-sources">
           <h3>Sources</h3>
           <ul id="detailSources"></ul>
-          <p class="sources-note">The official name and description are PlayStation&rsquo;s text. The guide is written in our own words for this entry — a source is cited, never copied.</p>
+          <p class="sources-note">Official text is PlayStation&rsquo;s; the guide is our own words.</p>
         </div>
         <button id="detailToggle" type="button" class="earn-btn">Mark earned</button>
       </article>
@@ -103,18 +94,56 @@
   <section class="missable-banner" id="missableBanner" aria-label="Missable warning">
     <h2>⚠ One trophy can be missed — 13 more are time-sensitive</h2>
     <p><strong>Positive Mental Attitude</strong> is the only reported missable: Lucia&rsquo;s balcony meditation in Chapter 1 disappears after that chapter, and the game has no mission replay. Keep a manual save at the start of every chapter. The other 13 flags below are time-sensitive — a partner, a one-off event, or a strand that can lock — and each trophy&rsquo;s note says why.</p>
-    <p class="banner-link"><a href="#tracker" data-filter-kind="missable">Show the 14 flagged trophies ↓</a></p>
+    <p class="banner-link"><a href="#missable" data-filter-kind="missable">Show the 14 flagged trophies ↓</a></p>
   </section>
 
   <section class="roadmap" id="roadmap" aria-label="Roadmap to the Platinum">
     <h2>Roadmap to the Platinum — six stages</h2>
-    <p class="section-intro">Built from the official descriptions: which story chapters and missions, which collectibles and counts, in what order. Around 200 hours for the Platinum; no online trophies, no difficulty trophies, no mission medals — long, not hard.</p>
+    <p class="section-intro">Built from the official descriptions: which story chapters and missions, which collectibles and counts, in what order. Around 200–300 hours for the Platinum; no online trophies, no difficulty trophies, no mission medals — long, not hard.</p>
     <ol class="stages" id="stages"></ol>
+  </section>
+
+  <section class="missable-watch" id="missable" aria-label="Missable watch list">
+    <h2>Missable watch list — all 14 flagged trophies</h2>
+    <p class="section-intro">One trophy is reported missable outright; the other 13 are time-sensitive. Check before each chapter and before the finale — no mission replay, so a missed flag means a new playthrough.</p>
+    <table class="watch-table">
+      <thead><tr><th>Trophy</th><th>Stage</th><th>When it can be missed — and what to do</th></tr></thead>
+      <tbody id="watchBody"></tbody>
+    </table>
+    <div class="save-strategy">
+      <h3>Save strategy — your safety net</h3>
+      <ol>
+        <li><strong>Manual save at the start of every chapter</strong> — a fresh slot each time, never overwriting the chapter-start save.</li>
+        <li><strong>Do Lucia&rsquo;s balcony meditation in Chapter 1</strong> on the morning after Down to Earth, before the chapter ends.</li>
+        <li><strong>Finish every side-character strand before the finale</strong> — start each the moment its marker appears; race Yago when the hourglass shows in Chapter 3.</li>
+        <li><strong>Take Cal&rsquo;s fishing challenge the moment he offers it</strong> — it may not come back. Save before every one-off attempt (showroom, plane, jewelry store, vaults).</li>
+        <li><strong>Do the partner trophies while Jason and Lucia are together</strong> — Hot Together and Retail Therapy need both of them.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="sources-audit" id="sources" aria-label="Sources and audit">
+    <h2>Sources &amp; audit — where every fact comes from</h2>
+    <p class="section-intro">Every guide in this atlas cites its sources beside it. The matrix below is what the guides were checked against at launch, 19–20 November 2026.</p>
+    <table class="sources-table">
+      <thead><tr><th>Source</th><th>Checked</th><th>What it verified</th></tr></thead>
+      <tbody id="sourcesBody"></tbody>
+    </table>
+    <div class="audit-grid">
+      <div class="audit-card"><strong>55 / 55</strong><span>official names verified against Exophase &amp; PSNProfiles</span></div>
+      <div class="audit-card"><strong>55 / 55</strong><span>guides, each in our own words, each citing ≥1 named source</span></div>
+      <div class="audit-card"><strong>127</strong><span>citations across the 55 guides (47 named sources)</span></div>
+      <div class="audit-card"><strong>14 / 14</strong><span>missable &amp; time-sensitive trophies flagged, with a save strategy</span></div>
+      <div class="audit-card"><strong>55 / 55</strong><span>trophies covered by the six-stage roadmap</span></div>
+      <div class="audit-card"><strong>0</strong><span>online trophies — the whole list is single-player</span></div>
+    </div>
+    <div class="counts-strip" id="countsStrip" aria-label="Counts the game tracks"></div>
+    <p class="export-note">Your progress lives only in this browser (localStorage). <strong>Export progress</strong> downloads it as a JSON file; <strong>Import progress</strong> reads that file back — your checklist survives a new browser, a new machine, or a cleared cache.</p>
   </section>
 
   <section class="honesty" aria-label="About this guide">
     <h2>The list, honestly</h2>
-    <p>Names, descriptions and grades are PlayStation&rsquo;s official text, as listed by Exophase and PSNProfiles on 18 November 2026 and reported by Push Square: 1 Platinum, 2 Gold, 6 Silver, 46 Bronze; 28 hidden until earned; no online trophies. GTA VI launches 19 November 2026, so the guides are written from the official descriptions, Rockstar&rsquo;s trailers and launch-week reporting — in our own words, never copied — and each one cites its sources beside it. Where a step is not yet confirmed in-game, the guide says so instead of guessing.</p>
+    <p>Names, descriptions and grades are PlayStation&rsquo;s official text, as listed by Exophase and PSNProfiles on 18 November 2026 and checked again against Push Square&rsquo;s launch-day guide on 19 November 2026: 1 Platinum, 2 Gold, 6 Silver, 46 Bronze; 28 hidden until earned; no online trophies. GTA VI launched 19 November 2026, so the guides are written from the official descriptions, Rockstar&rsquo;s trailers and launch-week reporting — in our own words, never copied — and each one cites its sources beside it. Where a step is still not confirmed in-game at launch, the guide says so instead of guessing: five trophies (In The Beginning…, Capital Offense, Personal Best, Bad Luck, I Guess, The Truth Is Out There) were still unconfirmed when PowerPyx and GTABase checked on 19 November — two now carry launch-day reports, three remain honest unknowns.</p>
     <p>The one reported missable trophy is <strong>Positive Mental Attitude</strong>: Lucia&rsquo;s balcony meditation spot in Chapter 1 disappears after that chapter, and the game has no mission replay. Keep a manual save at the start of every chapter. The other 13 flags are time-sensitive (a partner, a one-off event, a strand that can lock) and each note says why.</p>
     <p>This guide works with the network off: every file it loads lives under <code>app/</code>. Your progress is stored only in this browser (localStorage) and can be exported to a file and imported back.</p>
   </section>

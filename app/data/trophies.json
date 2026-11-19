@@ -1,9 +1,19 @@
 {
   "game": "Grand Theft Auto VI",
   "platform": "PlayStation 5",
-  "list": "The official 55 trophies, as published 18 Nov 2026",
-  "listNote": "Names, descriptions and grades are PlayStation's official text, as listed by Exophase and PSNProfiles on 18 Nov 2026 and reported by Push Square. Counts (42 Shooting Range challenges, 14 drone race locations, 18 meditation spots, 52 areas, 9 gangs, 8 garages) are the counts PlayStation tracks for those trophies. Hidden flags follow the 28 hidden trophies listed by Output Lag on 19 Nov 2026. GTA VI launches 19 Nov 2026; where a step is not yet confirmed in-game, the guide says so instead of guessing.",
+  "list": "The official 55 trophies, as published 18 Nov 2026, checked again at launch 19-20 Nov 2026",
+  "listNote": "Names, descriptions and grades are PlayStation's official text, as listed by Exophase and PSNProfiles on 18 Nov 2026 and reported by Push Square's launch-day guide on 19 Nov 2026. Counts (42 Shooting Range challenges, 14 drone race locations, 18 meditation spots, 52 areas, 9 gangs, 8 garages, 397 stunts, 18 card sets, 80 challenges, 100 WAiNK spots) are the counts PlayStation tracks for those trophies. Hidden flags follow the 28 hidden trophies listed by Output Lag on 19 Nov 2026. GTA VI launched 19 Nov 2026; where a step is still not confirmed in-game at launch, the guide says so instead of guessing.",
   "counts": { "total": 55, "platinum": 1, "gold": 2, "silver": 6, "bronze": 46, "hidden": 28, "online": 0 },
+  "sources": [
+    { "name": "Exophase — GTA VI trophy list", "date": "18 Nov 2026", "verified": "All 55 official names, descriptions and grades", "url": "https://www.exophase.com/game/grand-theft-auto-vi-psn/trophies/" },
+    { "name": "PSNProfiles — GTA VI trophies", "date": "18 Nov 2026", "verified": "PSN counts: 42 Shooting Range, 14 drone races, 18 meditation, 52 areas, 9 gangs, 8 garages", "url": "https://psnprofiles.com/trophies/43531-grand-theft-auto-vi" },
+    { "name": "Push Square — GTA 6 Trophy Guide & Roadmap", "date": "19 Nov 2026", "verified": "Launch-day methods: 397 stunts, 2 shooting ranges, 18 card sets, 80 challenges, 18 meditation spots, WAiNK breakdown, 300-hour estimate", "url": "https://www.pushsquare.com/guides/gta-6-trophy-guide-and-roadmap" },
+    { "name": "GamesRadar+ / PC Gamer — GTA 6 trophy lists", "date": "18 Nov 2026", "verified": "Same 55 names in the same order; Gamerscore values; 9 activity types", "url": "https://www.gamesradar.com/games/grand-theft-auto-6/gta-6-trophies-achievements/" },
+    { "name": "Output Lag — GTA 6 Trophy List", "date": "19 Nov 2026", "verified": "28 hidden trophies; Chapter 1 meditation warning; no mission replay", "url": "https://outputlag.com/guides/gta-6-trophy-list/" },
+    { "name": "PowerPyx — GTA 6 Trophy Guide (video)", "date": "19 Nov 2026", "verified": "Platinum 4/10, about 200 hours; one possibly missable trophy; cheats disable trophies", "url": "https://www.powerpyx.com/grand-theft-auto-vi-trophy-guide-roadmap/" },
+    { "name": "gtasix.how — GTA 6 Trophies and Achievements", "date": "19 Nov 2026", "verified": "Launch-day reports: UFO encounter in Kelly County, showroom crash, VCIA plane steal, tank at Mile Zero", "url": "https://gtasix.how/trophies/" },
+    { "name": "GTA Zone — GTA 6 Trophy List", "date": "18 Nov 2026", "verified": "Five entries still unconfirmed at launch (PowerPyx / GTABase): In The Beginning…, Capital Offense, Bad Luck, I Guess, The Truth Is Out There, Ten Pin", "url": "https://gta-zone.com/news/gta-6-trophies-achievements/" }
+  ],
   "trophies": [
     {
       "id": 1,
@@ -250,12 +260,12 @@
       "missable": false,
       "missableNote": null,
       "stage": 6,
-      "guide": "Attain 100% completion. The 100% checklist only appears after the story, under Progress > Stats > 100% Completion — but work done earlier still counts, so do the grind as you go. Expect 300 stunts (past the 250 for Cunning Stunts), 70 of 80 Challenges, all 8 bank vaults, all 39 gang operations and 200 of 277 vehicles.",
-      "steps": ["Open the 100% checklist after the credits and work through it.", "Grind the long counts early: stunts, Challenges, vaults, operations, vehicles."],
+      "guide": "Attain 100% completion. The 100% checklist only appears after the story, under Touch Pad > Progress > 100% Completion — but work done earlier still counts, so do the grind as you go. You do not need literally everything: 15 of the 18 collectible card sets count, and the list needs 300 stunts (past the 250 for Cunning Stunts), 70 of 80 Challenges, all 8 bank vaults and 200 of 277 vehicles. Push Square's launch-day guide (19 Nov 2026) puts the Platinum at 300 hours or more, so treat this as the last trophy, not the first.",
+      "steps": ["Open the 100% checklist after the credits and work through it.", "Grind the long counts early: stunts, Challenges, vaults, vehicles, card sets."],
       "sources": [
         { "name": "Exophase — GTA VI trophy list (official names, descriptions, grades)", "url": "https://www.exophase.com/game/grand-theft-auto-vi-psn/trophies/" },
-        { "name": "Output Lag — GTA 6 Trophy List (100% completion checklist)", "url": "https://outputlag.com/guides/gta-6-trophy-list/" },
-        { "name": "GTA Vice City Hub — GTA 6 Achievements (100% completion checklist)", "url": "https://www.gtavicecityhub.com/achievements" }
+        { "name": "Push Square — GTA 6 Trophy Guide & Roadmap, 19 Nov 2026 (100% checklist, 15 of 18 card sets, 300-hour estimate)", "url": "https://www.pushsquare.com/guides/gta-6-trophy-guide-and-roadmap" },
+        { "name": "Output Lag — GTA 6 Trophy List (100% completion checklist)", "url": "https://outputlag.com/guides/gta-6-trophy-list/" }
       ]
     }
     ,
@@ -270,10 +280,11 @@
       "missable": false,
       "missableNote": null,
       "stage": 3,
-      "guide": "Complete 250 stunts. Stunt jumps, under-the-bridge flights, knife flights and base jumps all count. Keep going past 250 — 100% completion needs 300.",
-      "steps": ["Attempt stunts as you travel; jumps and flights all count.", "Check the counter under Progress."],
+      "guide": "Complete 250 stunts. Stunt jumps, under-the-bridge flights, knife flights and base jumps all count — Push Square's launch-day guide (19 Nov 2026) counts 397 in the game: 130 stunt jumps, 202 under-the-bridge flights, 40 knife flights and 25 base jumps, so you need a little over half. Track them on the map under Touch Pad > Exploration > Stunt Spots, and your progress under Touch Pad > Progress > Activities > Stunts. Keep going past 250 — 100% completion needs 300.",
+      "steps": ["Attempt stunts as you travel; jumps and flights all count.", "Check the counter under Touch Pad > Progress > Activities > Stunts.", "Push past 250 toward 300 for 100% completion."],
       "sources": [
         { "name": "Exophase — GTA VI trophy list (official names, descriptions, grades)", "url": "https://www.exophase.com/game/grand-theft-auto-vi-psn/trophies/" },
+        { "name": "Push Square — GTA 6 Trophy Guide & Roadmap, 19 Nov 2026 (397 stunts: 130 jumps, 202 under bridges, 40 knife flights, 25 base jumps)", "url": "https://www.pushsquare.com/guides/gta-6-trophy-guide-and-roadmap" },
         { "name": "Output Lag — GTA 6 Trophy List (stunt counts)", "url": "https://outputlag.com/guides/gta-6-trophy-list/" }
       ]
     },
@@ -306,10 +317,11 @@
       "missable": false,
       "missableNote": null,
       "stage": 3,
-      "guide": "Earn a gold medal in all 42 Shooting Range challenges. There are two shooting ranges, with 42 gold medals between them. Learn each range's weapon and scoring, then repeat the challenge until the gold threshold clears.",
-      "steps": ["Visit both shooting ranges.", "Gold each challenge; the range shows its medal thresholds."],
+      "guide": "Earn a gold medal in all 42 Shooting Range challenges. There are two ranges — Rodgers Ranch & Shooting Range in Port Gellhorn and Griffin Shooting Range in Balsero — with 42 gold medals between them, most challenges in three difficulty tiers, some locked until you meet their conditions (Push Square, 19 Nov 2026). Find them on the map under Touch Pad > Activities > Shooting Ranges and track golds under Touch Pad > Progress > Activities > Shooting Ranges. Learn each challenge's weapon and scoring, then repeat it until the gold threshold clears.",
+      "steps": ["Visit both shooting ranges: Rodgers Ranch in Port Gellhorn, Griffin in Balsero.", "Gold each challenge; the range shows its medal thresholds.", "Unlock locked challenges by meeting their conditions first."],
       "sources": [
         { "name": "Exophase — GTA VI trophy list (official names, descriptions, grades)", "url": "https://www.exophase.com/game/grand-theft-auto-vi-psn/trophies/" },
+        { "name": "Push Square — GTA 6 Trophy Guide & Roadmap, 19 Nov 2026 (two ranges, 42 golds, three tiers)", "url": "https://www.pushsquare.com/guides/gta-6-trophy-guide-and-roadmap" },
         { "name": "Output Lag — GTA 6 Trophy List (two shooting ranges, 42 golds)", "url": "https://outputlag.com/guides/gta-6-trophy-list/" }
       ]
     },
@@ -324,10 +336,11 @@
       "missable": false,
       "missableNote": null,
       "stage": 3,
-      "guide": "Win a Top Fun Drone Race at every location. There are 14 drone race locations. Win at least one race at each — you do not need to win every race, just one per location.",
-      "steps": ["Find a Top Fun drone race location.", "Win one race there, then move to the next location."],
+      "guide": "Win a Top Fun Drone Race at every location. There are 14 drone race locations, and some charge an entry fee (Push Square, 19 Nov 2026). Win at least one race at each — you do not need to win every race, just one per location. Find them on the map under Touch Pad > Activities > Drones > Top Fun Drones.",
+      "steps": ["Find a Top Fun drone race location.", "Win one race there, then move to the next location.", "Bring cash — some locations charge an entry fee."],
       "sources": [
         { "name": "Exophase — GTA VI trophy list (official names, descriptions, grades)", "url": "https://www.exophase.com/game/grand-theft-auto-vi-psn/trophies/" },
+        { "name": "Push Square — GTA 6 Trophy Guide & Roadmap, 19 Nov 2026 (14 locations, entry fees)", "url": "https://www.pushsquare.com/guides/gta-6-trophy-guide-and-roadmap" },
         { "name": "HowToVideoGame — GTA 6 Trophy and Achievement List", "url": "https://howtovideogame.com/gta-6-trophies/" }
       ]
     },
@@ -360,10 +373,11 @@
       "missable": true,
       "missableNote": "Reported time-sensitive: take the challenge when Cal offers it — it may not come back.",
       "stage": 3,
-      "guide": "Beat Cal in a fishing challenge. Cal's challenge is a one-off strand moment — take it the moment he offers it, and treat it as time-sensitive. Bring your best rod and watch the tension: reel in when the line slackens, ease off when it strains.",
-      "steps": ["Accept Cal's fishing challenge when it appears.", "Win the challenge; keep a save from before it, just in case."],
+      "guide": "Beat Cal in a fishing challenge. Cal asks you fairly early on to catch a Parrotfish over 2kg — fish in the marked area until one of that size bites (Push Square, 19 Nov 2026). The challenge is a one-off strand moment — take it the moment he offers it, and treat it as time-sensitive. You need a boat with a fishing rod; plenty sit in the area to borrow if you do not own one. Reel in when the line slackens, ease off when it strains.",
+      "steps": ["Accept Cal's fishing challenge when it appears.", "Fish the marked area for a Parrotfish over 2kg.", "Win the challenge; keep a save from before it, just in case."],
       "sources": [
         { "name": "Exophase — GTA VI trophy list (official names, descriptions, grades)", "url": "https://www.exophase.com/game/grand-theft-auto-vi-psn/trophies/" },
+        { "name": "Push Square — GTA 6 Trophy Guide & Roadmap, 19 Nov 2026 (Cal's Parrotfish over 2kg)", "url": "https://www.pushsquare.com/guides/gta-6-trophy-guide-and-roadmap" },
         { "name": "HowToVideoGame — GTA 6 Trophy and Achievement List", "url": "https://howtovideogame.com/gta-6-trophies/" }
       ]
     },
@@ -394,7 +408,7 @@
       "count": null,
       "kind": "side",
       "missable": true,
-      "missableNote": "Time-sensitive: finish the strand before the finale; side strands are reported to lock once the story passes them.",
+      "missableNote": "Andy's strand — finish all his missions before the finale; side strands are reported to lock once the story passes them.",
       "stage": 2,
       "guide": "Complete the final mission for Andy. Andy's strand ends with a finale mission — finish the whole strand before the story's final mission, and keep a save from before the finale in case a strand locks.",
       "steps": ["Start Andy's strand when its marker appears.", "Play its missions through to the finale."],
@@ -412,7 +426,7 @@
       "count": null,
       "kind": "side",
       "missable": true,
-      "missableNote": "Time-sensitive: finish the strand before the finale; side strands are reported to lock once the story passes them.",
+      "missableNote": "Kenton's strand — finish all his missions, ending with Maritime Disputes, before the finale; side strands are reported to lock once the story passes them.",
       "stage": 2,
       "guide": "Complete the final mission for Kenton. Kenton's strand ends in a finale — play it through before the story ends.",
       "steps": ["Start Kenton's strand when its marker appears.", "Play its missions through to the finale."],
@@ -430,7 +444,7 @@
       "count": null,
       "kind": "side",
       "missable": true,
-      "missableNote": "Time-sensitive: finish the strand before the finale; side strands are reported to lock once the story passes them.",
+      "missableNote": "Billy's strand — finish all his missions, ending with Hometown Heroes, before the finale; side strands are reported to lock once the story passes them.",
       "stage": 2,
       "guide": "Complete the final mission for Billy. Billy's strand ends in a finale — finish it before the final mission.",
       "steps": ["Start Billy's strand when its marker appears.", "Play its missions through to the finale."],
@@ -466,7 +480,7 @@
       "count": null,
       "kind": "side",
       "missable": true,
-      "missableNote": "Time-sensitive: finish the strand before the finale; side strands are reported to lock once the story passes them.",
+      "missableNote": "Randy's strand — finish all his missions, and his vehicle wish list, before the finale; side strands are reported to lock once the story passes them.",
       "stage": 2,
       "guide": "Complete the final mission for Randy. Randy's strand ends in a finale — finish it before the story's final mission.",
       "steps": ["Start Randy's strand when its marker appears.", "Play its missions through to the finale."],
@@ -484,7 +498,7 @@
       "count": null,
       "kind": "side",
       "missable": true,
-      "missableNote": "Time-sensitive: finish the strand before the finale; side strands are reported to lock once the story passes them.",
+      "missableNote": "Tyrone's strand — finish all his missions, and the Kitty Litter Lab deliveries, before the finale; side strands are reported to lock once the story passes them.",
       "stage": 2,
       "guide": "Complete the final mission for Tyrone. Tyrone's strand ends in a finale — finish it before the final mission.",
       "steps": ["Start Tyrone's strand when its marker appears.", "Play its missions through to the finale."],
@@ -504,10 +518,11 @@
       "missable": true,
       "missableNote": "THE missable trophy: Lucia's balcony meditation in Chapter 1 disappears after that chapter, and the game has no mission replay. Keep a manual save at the start of every chapter.",
       "stage": 4,
-      "guide": "Meditate at every spot across Leonida. There are 18 spots. The one you can miss is Lucia's balcony meditation in Chapter 1: on a morning after the mission Down to Earth, Lucia heads out to the balcony of Jason's house — follow her and accept the optional task. Meditation spots show as purple icons when you are close, and each outdoor spot should count twice if you meditate there with both characters, so bring your partner every time.",
-      "steps": ["In Chapter 1, do the balcony meditation before the chapter ends.", "Meditate at every spot, bringing your partner to outdoor spots.", "Keep a Chapter 1 save until the trophy pops."],
+      "guide": "Meditate at every spot across Leonida. There are 18 spots. The one you can miss is Lucia's balcony meditation in Chapter 1: on a morning after the mission Down to Earth, Lucia heads out to the balcony of Jason's house — follow her and accept the optional task. A meditation only counts once the final 'zen' animation has played (Push Square, 19 Nov 2026). Track your spots under Touch Pad > Progress > Collections > Exploration > Meditations, and find discovered ones on the map under Touch Pad > Exploration > Meditate Around Leonida. Meditation spots show as purple icons when you are close, and each outdoor spot should count twice if you meditate there with both characters, so bring your partner every time.",
+      "steps": ["In Chapter 1, do the balcony meditation before the chapter ends.", "Meditate at every spot, bringing your partner to outdoor spots.", "Wait for the 'zen' animation at each spot — that is what marks it complete.", "Keep a Chapter 1 save until the trophy pops."],
       "sources": [
         { "name": "Exophase — GTA VI trophy list (official names, descriptions, grades)", "url": "https://www.exophase.com/game/grand-theft-auto-vi-psn/trophies/" },
+        { "name": "Push Square — GTA 6 Trophy Guide & Roadmap, 19 Nov 2026 (18 spots, zen animation, tracking paths)", "url": "https://www.pushsquare.com/guides/gta-6-trophy-guide-and-roadmap" },
         { "name": "Output Lag — GTA 6 Trophy List (missable: Chapter 1 meditation spot)", "url": "https://outputlag.com/guides/gta-6-trophy-list/" },
         { "name": "GTA Vibes — GTA 6 Trophy List (only one possible missable)", "url": "https://www.gtavibes.com/guides/gta-6-trophy-list-achievements" }
       ]
@@ -542,10 +557,11 @@
       "missable": false,
       "missableNote": null,
       "stage": 4,
-      "guide": "Complete 3 Collectible Card sets. Cards are scattered across Leonida; completing three full sets is the ask. Sweep the map region by region and check your collection as you go — the card tab shows which sets are missing pieces.",
-      "steps": ["Collect cards as you explore.", "Complete any 3 full sets."],
+      "guide": "Complete 3 Collectible Card sets. There are 18 sets of cards across Leonida (Push Square, 19 Nov 2026); completing any three full sets is the ask, and 100% completion needs 15 of them. Cards you sell at Pawn Shops still count toward your progress, so sell duplicates freely. Sweep the map region by region and check your collection as you go — the card tab shows which sets are missing pieces.",
+      "steps": ["Collect cards as you explore.", "Complete any 3 full sets.", "Sell duplicates at Pawn Shops — sold cards still count."],
       "sources": [
         { "name": "Exophase — GTA VI trophy list (official names, descriptions, grades)", "url": "https://www.exophase.com/game/grand-theft-auto-vi-psn/trophies/" },
+        { "name": "Push Square — GTA 6 Trophy Guide & Roadmap, 19 Nov 2026 (18 sets, 3 needed, 15 for 100%)", "url": "https://www.pushsquare.com/guides/gta-6-trophy-guide-and-roadmap" },
         { "name": "GTA Vice City Hub — GTA 6 Achievements", "url": "https://www.gtavicecityhub.com/achievements" }
       ]
     },
@@ -560,10 +576,11 @@
       "missable": false,
       "missableNote": null,
       "stage": 4,
-      "guide": "WAiNK It at 100 locations. Open the WAiNK app at 100 different spots and use it there. It is a grind best done while you travel for other trophies — tag a location every time you pass somewhere new.",
-      "steps": ["Open the WAiNK app at new locations as you travel.", "Reach 100 tagged locations."],
+      "guide": "WAiNK It at 100 locations. WAiNK is an app on Jason's or Lucia's phone — hold Up to open it — and it scans landmarks for extra information (Push Square, 19 Nov 2026). There are 31 WAiNK landmarks, 35 curiosities and 23 sculptures to scan, so 100 of them is the ask. It is a grind best done while you travel for other trophies — tag a location every time you pass somewhere new. Track progress under Touch Pad > Progress > Collections > WAiNK Locations.",
+      "steps": ["Open the WAiNK app at new locations as you travel.", "Reach 100 tagged locations.", "Check Touch Pad > Progress > Collections > WAiNK Locations for what is left."],
       "sources": [
         { "name": "Exophase — GTA VI trophy list (official names, descriptions, grades)", "url": "https://www.exophase.com/game/grand-theft-auto-vi-psn/trophies/" },
+        { "name": "Push Square — GTA 6 Trophy Guide & Roadmap, 19 Nov 2026 (31 landmarks, 35 curiosities, 23 sculptures)", "url": "https://www.pushsquare.com/guides/gta-6-trophy-guide-and-roadmap" },
         { "name": "HowToVideoGame — GTA 6 Trophy and Achievement List", "url": "https://howtovideogame.com/gta-6-trophies/" }
       ]
     },
@@ -578,10 +595,11 @@
       "missable": false,
       "missableNote": null,
       "stage": 5,
-      "guide": "Complete 50 Challenges. Challenges are listed under Progress > Challenges. Many complete on their own while you play; 100% needs 70 of the 80, so push past 50 as you go.",
-      "steps": ["Open Progress > Challenges to see what is close.", "Finish 50; keep going toward 70 for 100%."],
+      "guide": "Complete 50 Challenges. Challenges are in-game feats listed under Touch Pad > Progress > Challenges — there are 80 in the game, and you need 50 for this trophy; 100% needs 70 of them (Push Square, 19 Nov 2026). Many complete on their own while you play, so push past 50 as you go.",
+      "steps": ["Open Touch Pad > Progress > Challenges to see what is close.", "Finish 50; keep going toward 70 for 100%."],
       "sources": [
         { "name": "Exophase — GTA VI trophy list (official names, descriptions, grades)", "url": "https://www.exophase.com/game/grand-theft-auto-vi-psn/trophies/" },
+        { "name": "Push Square — GTA 6 Trophy Guide & Roadmap, 19 Nov 2026 (80 challenges, 50 needed, 70 for 100%)", "url": "https://www.pushsquare.com/guides/gta-6-trophy-guide-and-roadmap" },
         { "name": "Output Lag — GTA 6 Trophy List (Challenges list)", "url": "https://outputlag.com/guides/gta-6-trophy-list/" }
       ]
     },
@@ -612,7 +630,7 @@
       "count": null,
       "kind": "combat",
       "missable": true,
-      "missableNote": "Needs Jason and Lucia together — do it while both are playable and partnered.",
+      "missableNote": "Opens after the Chapter 2 mission Coffee Break — needs Jason and Lucia together, so do it while both are playable and partnered.",
       "stage": 5,
       "guide": "Rob 3 shops back-to-back with your partner without losing your Wanted Level. Call your partner, then rob three shops in a row while the police are still chasing you. If the stars fade and you are only in the red heat zone, the chain breaks. The trophy can take about 30 seconds to pop after you leave the third shop.",
       "steps": ["Call your partner in.", "Rob three shops in a row without the wanted level dropping.", "Wait about 30 seconds after the third shop."],
@@ -722,10 +740,11 @@
       "missable": false,
       "missableNote": null,
       "stage": 5,
-      "guide": "Rob 5 Bank Vaults and escape. Bank vaults unlock through That's Where The Money Is, an optional mission near the end of Chapter 4. Tail an armored security van to a large bank and get into the vault while the guard has it open. You cannot carry all the bags alone, so bring your partner. Vault jobs give you a 4-star wanted level straight away, so escaping one with your partner also earns Hot Together. 100% needs all eight vaults.",
-      "steps": ["Do That's Where The Money Is near the end of Chapter 4.", "Rob 5 vaults with your partner and escape each time."],
+      "guide": "Rob 5 Bank Vaults and escape. Bank vaults unlock through That's Where The Money Is, an optional mission near the end of Chapter 4. Tail an armored security van to a large bank and get into the vault while the guard has it open. You cannot carry all the bags alone, so bring your partner. Vault jobs bring a 4-star wanted level straight away (Push Square, 19 Nov 2026), so escaping one with your partner also earns Hot Together. There are 8 vaults in all — 100% needs every one.",
+      "steps": ["Do That's Where The Money Is near the end of Chapter 4.", "Rob 5 vaults with your partner and escape each time.", "Keep going to all 8 vaults for 100% completion."],
       "sources": [
         { "name": "Exophase — GTA VI trophy list (official names, descriptions, grades)", "url": "https://www.exophase.com/game/grand-theft-auto-vi-psn/trophies/" },
+        { "name": "Push Square — GTA 6 Trophy Guide & Roadmap, 19 Nov 2026 (5 vaults, 4-star wanted level)", "url": "https://www.pushsquare.com/guides/gta-6-trophy-guide-and-roadmap" },
         { "name": "Output Lag — GTA 6 Trophy List (vaults unlock in Chapter 4)", "url": "https://outputlag.com/guides/gta-6-trophy-list/" }
       ]
     },
@@ -795,11 +814,12 @@
       "missable": false,
       "missableNote": null,
       "stage": 6,
-      "guide": "Enjoy a cocktail with a view on Ocean Beach. Go to Ocean Beach, order a cocktail and take in the view. The description is the only hint at launch — no confirmed trigger was published, so try the beachfront bars at sunset and let it pop while you explore.",
-      "steps": ["Go to Ocean Beach.", "Order a cocktail at a beachfront bar."],
+      "guide": "Push Square's launch-day guide (19 Nov 2026) lists this trophy with no unlock method at all, and PowerPyx still marks it not yet known — the description is the only hint anyone has. Head for the Ocean Beach bars, order a cocktail where you can see the water, and let it pop while you explore; do not chase it until the rest of the list is done.",
+      "steps": ["Go to Ocean Beach and find a beachfront bar with a view.", "Order a cocktail and linger at the view.", "If it does not pop, move on — no confirmed trigger was published at launch."],
       "sources": [
         { "name": "Exophase — GTA VI trophy list (official names, descriptions, grades)", "url": "https://www.exophase.com/game/grand-theft-auto-vi-psn/trophies/" },
-        { "name": "Output Lag — GTA 6 Trophy List (no confirmed unlock method at launch)", "url": "https://outputlag.com/guides/gta-6-trophy-list/" }
+        { "name": "Push Square — GTA 6 Trophy Guide & Roadmap, 19 Nov 2026 (no method listed)", "url": "https://www.pushsquare.com/guides/gta-6-trophy-guide-and-roadmap" },
+        { "name": "PowerPyx — GTA 6 Trophy Guide, 19 Nov 2026 (marked not yet known)", "url": "https://www.powerpyx.com/grand-theft-auto-vi-trophy-guide-roadmap/" }
       ]
     },
     {
@@ -813,11 +833,12 @@
       "missable": true,
       "missableNote": "A one-off smash — save before you try it; a failed run means finding another showroom.",
       "stage": 5,
-      "guide": "Smash your way out of a vehicle showroom in classic style. Take a car and smash out through a vehicle showroom's frontage. Save first and pick a showroom away from heavy police patrols — the escape is the hard part.",
-      "steps": ["Drive into a vehicle showroom.", "Smash your way out through the front."],
+      "guide": "The description is the trick itself: drive a car through a vehicle showroom's front window and out the other side, in the style of the old games. Launch-day reports (gtasix.how, 19 Nov 2026, citing GTABase) say a straight crash through the glass is what pops it, though no text guide has confirmed the exact showroom yet. Save first, pick a quiet showroom, build speed on the approach, and drive straight through the window — the escape, with the police on you, is the hard part.",
+      "steps": ["Save manually before you try — a failed run means finding another showroom.", "Pick a vehicle showroom with a clear run-up and a glass front.", "Drive straight through the front window and out."],
       "sources": [
         { "name": "Exophase — GTA VI trophy list (official names, descriptions, grades)", "url": "https://www.exophase.com/game/grand-theft-auto-vi-psn/trophies/" },
-        { "name": "Output Lag — GTA 6 Trophy List (no confirmed unlock method at launch)", "url": "https://outputlag.com/guides/gta-6-trophy-list/" }
+        { "name": "gtasix.how — GTA 6 Trophies, 19 Nov 2026 (crash out through the window, via GTABase)", "url": "https://gtasix.how/trophies/" },
+        { "name": "Push Square — GTA 6 Trophy Guide & Roadmap, 19 Nov 2026 (no method listed)", "url": "https://www.pushsquare.com/guides/gta-6-trophy-guide-and-roadmap" }
       ]
     },
     {
@@ -849,12 +870,13 @@
       "missable": false,
       "missableNote": null,
       "stage": 6,
-      "guide": "A partnership with mass appeal. It should pop when Jason and Lucia both reach maximum Strength. Buy a gym membership and train with your partner there — the partner trains alongside you. The trigger was not confirmed at launch, so treat this as the best current report.",
-      "steps": ["Buy a gym membership.", "Train with your partner until both reach maximum Strength."],
+      "guide": "PowerPyx still marks this one not yet known at launch (19 Nov 2026), and Push Square's guide lists it with no method — the description is a riddle about a partnership. The best current report is that it pops when Jason and Lucia both reach maximum Strength: buy a gym membership and train with your partner there, since the partner trains alongside you. Treat that as a lead, not a confirmed trigger, and do not grind it until the rest of the list is done.",
+      "steps": ["Buy a gym membership.", "Train with your partner until both reach maximum Strength.", "If it does not pop at maximum Strength, leave it — the trigger is still unconfirmed."],
       "sources": [
         { "name": "Exophase — GTA VI trophy list (official names, descriptions, grades)", "url": "https://www.exophase.com/game/grand-theft-auto-vi-psn/trophies/" },
-        { "name": "Output Lag — GTA 6 Trophy List (gym training with partner)", "url": "https://outputlag.com/guides/gta-6-trophy-list/" },
-        { "name": "Rockstar Games — Grand Theft Auto VI", "url": "https://www.rockstargames.com/VI" }
+        { "name": "PowerPyx — GTA 6 Trophy Guide, 19 Nov 2026 (marked not yet known)", "url": "https://www.powerpyx.com/grand-theft-auto-vi-trophy-guide-roadmap/" },
+        { "name": "Push Square — GTA 6 Trophy Guide & Roadmap, 19 Nov 2026 (no method listed)", "url": "https://www.pushsquare.com/guides/gta-6-trophy-guide-and-roadmap" },
+        { "name": "Output Lag — GTA 6 Trophy List (gym training with partner)", "url": "https://outputlag.com/guides/gta-6-trophy-list/" }
       ]
     },
     {
@@ -886,11 +908,12 @@
       "missable": false,
       "missableNote": null,
       "stage": 6,
-      "guide": "Second time's the charm. The description points at failing once and succeeding on the second try. No confirmed trigger was published at launch — it will likely pop while you play normally, so do not chase it until the rest of the list is done.",
-      "steps": ["Play normally; retry anything you fail.", "It should pop on a second attempt somewhere in the game."],
+      "guide": "No guide has pinned this one down at launch — PowerPyx marks it not yet known (19 Nov 2026) and Push Square lists it with no method. The description, 'Second time's the charm', points at failing once and succeeding on the second try, so the honest read is that it pops on a second attempt somewhere in the game. Play normally, retry anything you fail, and let it come to you; do not chase it until the rest of the list is done.",
+      "steps": ["Play normally; retry anything you fail.", "It should pop on a second attempt somewhere in the game.", "If it has not popped by the end of the list, it is still unconfirmed — check back for launch-week reports."],
       "sources": [
         { "name": "Exophase — GTA VI trophy list (official names, descriptions, grades)", "url": "https://www.exophase.com/game/grand-theft-auto-vi-psn/trophies/" },
-        { "name": "Output Lag — GTA 6 Trophy List (no confirmed unlock method at launch)", "url": "https://outputlag.com/guides/gta-6-trophy-list/" }
+        { "name": "PowerPyx — GTA 6 Trophy Guide, 19 Nov 2026 (marked not yet known)", "url": "https://www.powerpyx.com/grand-theft-auto-vi-trophy-guide-roadmap/" },
+        { "name": "Push Square — GTA 6 Trophy Guide & Roadmap, 19 Nov 2026 (no method listed)", "url": "https://www.pushsquare.com/guides/gta-6-trophy-guide-and-roadmap" }
       ]
     },
     {
@@ -904,11 +927,12 @@
       "missable": false,
       "missableNote": null,
       "stage": 6,
-      "guide": "What the hell just happened? The description points at a strange event. No confirmed trigger was published at launch — it will likely pop while you explore Leonida, so leave it until the end and let it come to you.",
-      "steps": ["Explore Leonida's odd corners.", "It should pop on a strange encounter."],
+      "guide": "Launch-day videos report this as a UFO random encounter in Kelly County after 2am: a car with flickering lights waits at the roadside, the UFO shows up further up the road, you talk to the stranger, then go back to her car (reported by HarryNinetyFour and Perfect Score, via gtasix.how, 19 Nov 2026). Treat it as reported, not proven — drive Kelly County's roads late at night and watch for the flickering lights.",
+      "steps": ["Drive the Kelly County roads after 2am.", "Watch for a roadside car with flickering lights.", "Talk to the stranger, then return to her car when the UFO appears."],
       "sources": [
         { "name": "Exophase — GTA VI trophy list (official names, descriptions, grades)", "url": "https://www.exophase.com/game/grand-theft-auto-vi-psn/trophies/" },
-        { "name": "Output Lag — GTA 6 Trophy List (no confirmed unlock method at launch)", "url": "https://outputlag.com/guides/gta-6-trophy-list/" }
+        { "name": "gtasix.how — GTA 6 Trophies, 19 Nov 2026 (UFO encounter, Kelly County after 2am)", "url": "https://gtasix.how/trophies/" },
+        { "name": "Push Square — GTA 6 Trophy Guide & Roadmap, 19 Nov 2026 (no method listed)", "url": "https://www.pushsquare.com/guides/gta-6-trophy-guide-and-roadmap" }
       ]
     },
     {

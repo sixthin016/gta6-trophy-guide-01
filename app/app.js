@@ -184,6 +184,65 @@ function buildKindChips() {
   }
 }
 
+function renderMissableWatch() {
+  const body = $('watchBody');
+  body.innerHTML = '';
+  const flagged = state.data.trophies.filter((t) => t.missable);
+  for (const trophy of flagged) {
+    const tr = document.createElement('tr');
+    const earned = state.earned.has(trophy.id);
+    const nameCell = document.createElement('td');
+    nameCell.innerHTML = `${escapeHtml(trophy.name)} <span class="watch-grade">${escapeHtml(trophy.grade)}${earned ? ' · ✓ earned' : ''}</span>`;
+    const stageCell = document.createElement('td');
+    stageCell.textContent = `Stage ${trophy.stage}`;
+    const noteCell = document.createElement('td');
+    noteCell.className = 'watch-note';
+    noteCell.textContent = trophy.missableNote || '';
+    tr.append(nameCell, stageCell, noteCell);
+    body.appendChild(tr);
+  }
+}
+
+function renderSourcesAudit() {
+  const body = $('sourcesBody');
+  body.innerHTML = '';
+  for (const source of state.data.sources || []) {
+    const tr = document.createElement('tr');
+    const nameCell = document.createElement('td');
+    if (source.url) {
+      const a = document.createElement('a');
+      a.href = source.url;
+      a.rel = 'noopener';
+      a.textContent = source.name;
+      nameCell.appendChild(a);
+    } else {
+      nameCell.textContent = source.name;
+    }
+    const dateCell = document.createElement('td');
+    dateCell.className = 'source-date';
+    dateCell.textContent = source.date || '';
+    const whatCell = document.createElement('td');
+    whatCell.textContent = source.verified || '';
+    tr.append(nameCell, dateCell, whatCell);
+    body.appendChild(tr);
+  }
+  const strip = $('countsStrip');
+  strip.innerHTML = '';
+  const counts = [
+    ['42', 'Shooting Range challenges'], ['14', 'Top Fun drone races'],
+    ['18', 'meditation spots'], ['52', 'areas to explore'], ['9', 'gangs'],
+    ['8', 'garages'], ['397', 'stunts in the game'], ['18', 'card sets'],
+    ['80', 'challenges'], ['100', 'WAiNK spots'], ['250', 'stunts for the trophy'],
+    ['100', 'vehicles to discover'], ['500', 'choices'], ['$250,000', 'marked bills to launder'],
+  ];
+  for (const [num, label] of counts) {
+    const chip = document.createElement('span');
+    chip.className = 'count-chip';
+    chip.innerHTML = `<strong>${escapeHtml(num)}</strong> ${escapeHtml(label)}`;
+    strip.appendChild(chip);
+  }
+}
+
 function renderRoadmap() {
   const list = $('stages');
   list.innerHTML = '';
@@ -230,9 +289,8 @@ function renderChecklist() {
     if (trophy.missable) tags.push('<span class="tag missable">Missable</span>');
     if (trophy.count) tags.push(`<span class="tag count-tag">0–${formatCount(trophy.count)}</span>`);
     li.innerHTML = `<input type="checkbox" ${earned ? 'checked' : ''} aria-label="Mark ${escapeHtml(name)} earned">`
-      + `<div><div class="trophy-name">${escapeHtml(name)}</div>`
-      + `<p class="trophy-desc">${escapeHtml(desc)}</p>`
-      + `<div class="trophy-tags">${tags.join('')}</div></div>`
+      + `<div><div class="trophy-name">${escapeHtml(name)} <span class="trophy-tags">${tags.join('')}</span></div>`
+      + `<p class="trophy-desc">${escapeHtml(desc)}</p></div>`
       + `<span class="grade-label"><span class="medal ${trophy.grade}"></span>${trophy.grade}</span>`;
     li.addEventListener('click', (event) => {
       if (event.target.tagName === 'INPUT') return;
@@ -327,6 +385,8 @@ function renderDetail() {
 function renderAll() {
   updateProgressBar();
   renderRoadmap();
+  renderMissableWatch();
+  renderSourcesAudit();
   renderChecklist();
   renderDetail();
 }
@@ -432,7 +492,8 @@ function bindControls() {
       state.kind = link.dataset.filterKind;
       buildKindChips();
       renderChecklist();
-      $('tracker').scrollIntoView({ behavior: 'smooth' });
+      const target = document.querySelector(link.getAttribute('href') || '#tracker');
+      if (target) target.scrollIntoView();
     });
   });
 }
