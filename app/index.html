@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Atlas — GTA VI Trophy Guide &amp; Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-inner">
+    <div>
+      <p class="eyebrow">Grand Theft Auto VI &middot; PlayStation 5</p>
+      <h1>Leonida Atlas</h1>
+      <p class="subtitle">The offline guide and tracker for all 55 trophies — official names, descriptions and grades, a cited guide to each, a six-stage roadmap to the Platinum, and the missable warnings.</p>
+    </div>
+    <div class="totals" aria-label="Trophy list totals">
+      <div class="total"><strong>55</strong><span>trophies</span></div>
+      <div class="total"><strong>1</strong><span>platinum</span></div>
+      <div class="total"><strong>2</strong><span>gold</span></div>
+      <div class="total"><strong>6</strong><span>silver</span></div>
+      <div class="total"><strong>46</strong><span>bronze</span></div>
+      <div class="total"><strong>28</strong><span>hidden</span></div>
+      <div class="total"><strong>0</strong><span>online</span></div>
+    </div>
+  </div>
+  <div class="progress-wrap">
+    <div class="progress-line"><span id="progressText">0 of 55 earned — 0%</span><span id="progressDetail">Platinum: not yet</span></div>
+    <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="55" aria-valuenow="0" id="progressBar"><div class="progress-fill" id="progressFill"></div></div>
+  </div>
+</header>
+
+<main>
+  <section class="toolbar" aria-label="Tracker controls">
+    <div class="toolbar-row">
+      <label class="search-box">Search <input id="search" type="search" placeholder="Trophy, mission or keyword…" autocomplete="off"></label>
+      <label class="grade-box">Grade
+        <select id="grade">
+          <option value="all">All grades</option>
+          <option value="platinum">Platinum</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="bronze">Bronze</option>
+        </select>
+      </label>
+      <label class="state-box">Show
+        <select id="state">
+          <option value="all">All trophies</option>
+          <option value="missing">Not earned yet</option>
+          <option value="earned">Earned</option>
+        </select>
+      </label>
+      <label class="spoiler-box"><input id="spoiler" type="checkbox"> <span>Hide spoilers — story trophies stay hidden until earned</span></label>
+    </div>
+    <div class="toolbar-row kind-row" id="kindChips" role="group" aria-label="Filter by kind"></div>
+    <div class="toolbar-row actions-row">
+      <button id="exportBtn" type="button">Export progress</button>
+      <label class="import-btn">Import progress <input id="importFile" type="file" accept="application/json,.json"></label>
+      <button id="resetBtn" type="button" class="quiet">Reset progress</button>
+      <span class="saved-note" id="savedNote">Progress saves in this browser automatically.</span>
+    </div>
+  </section>
+
+  <div class="tracker-grid" id="tracker">
+    <section class="checklist" aria-label="Trophy checklist">
+      <h2 id="listHeading">Checklist — 55 trophies</h2>
+      <p class="list-count" id="listCount"></p>
+      <ul class="trophy-list" id="trophyList"></ul>
+    </section>
+    <aside class="detail" id="detail" aria-label="Trophy guide" aria-live="polite">
+      <div class="detail-empty" id="detailEmpty">
+        <h2>Pick a trophy</h2>
+        <p>Select any trophy in the checklist to read its guide here — what to do, where and how, when it can be missed, and the sources each fact comes from.</p>
+      </div>
+      <article class="detail-card" id="detailCard" hidden>
+        <p class="detail-grade"><span id="detailMedal" class="medal"></span><span id="detailGradeText"></span></p>
+        <h2 id="detailName"></h2>
+        <p class="detail-desc" id="detailDesc"></p>
+        <p class="detail-meta" id="detailMeta"></p>
+        <div class="detail-guide">
+          <h3>Guide</h3>
+          <p id="detailGuide"></p>
+          <ol class="detail-steps" id="detailSteps"></ol>
+        </div>
+        <p class="detail-missable" id="detailMissable" hidden></p>
+        <div class="detail-counter" id="detailCounter" hidden>
+          <h3>Your count</h3>
+          <label><span id="counterLabel">Progress</span>
+            <input id="counterInput" type="number" min="0" value="0">
+          </label>
+          <span class="counter-of" id="counterOf"></span>
+        </div>
+        <div class="detail-sources">
+          <h3>Sources</h3>
+          <ul id="detailSources"></ul>
+          <p class="sources-note">The official name and description are PlayStation&rsquo;s text. The guide is written in our own words for this entry — a source is cited, never copied.</p>
+        </div>
+        <button id="detailToggle" type="button" class="earn-btn">Mark earned</button>
+      </article>
+    </aside>
+  </div>
+
+  <section class="missable-banner" id="missableBanner" aria-label="Missable warning">
+    <h2>⚠ One trophy can be missed — 13 more are time-sensitive</h2>
+    <p><strong>Positive Mental Attitude</strong> is the only reported missable: Lucia&rsquo;s balcony meditation in Chapter 1 disappears after that chapter, and the game has no mission replay. Keep a manual save at the start of every chapter. The other 13 flags below are time-sensitive — a partner, a one-off event, or a strand that can lock — and each trophy&rsquo;s note says why.</p>
+    <p class="banner-link"><a href="#tracker" data-filter-kind="missable">Show the 14 flagged trophies ↓</a></p>
+  </section>
+
+  <section class="roadmap" id="roadmap" aria-label="Roadmap to the Platinum">
+    <h2>Roadmap to the Platinum — six stages</h2>
+    <p class="section-intro">Built from the official descriptions: which story chapters and missions, which collectibles and counts, in what order. Around 200 hours for the Platinum; no online trophies, no difficulty trophies, no mission medals — long, not hard.</p>
+    <ol class="stages" id="stages"></ol>
+  </section>
+
+  <section class="honesty" aria-label="About this guide">
+    <h2>The list, honestly</h2>
+    <p>Names, descriptions and grades are PlayStation&rsquo;s official text, as listed by Exophase and PSNProfiles on 18 November 2026 and reported by Push Square: 1 Platinum, 2 Gold, 6 Silver, 46 Bronze; 28 hidden until earned; no online trophies. GTA VI launches 19 November 2026, so the guides are written from the official descriptions, Rockstar&rsquo;s trailers and launch-week reporting — in our own words, never copied — and each one cites its sources beside it. Where a step is not yet confirmed in-game, the guide says so instead of guessing.</p>
+    <p>The one reported missable trophy is <strong>Positive Mental Attitude</strong>: Lucia&rsquo;s balcony meditation spot in Chapter 1 disappears after that chapter, and the game has no mission replay. Keep a manual save at the start of every chapter. The other 13 flags are time-sensitive (a partner, a one-off event, a strand that can lock) and each note says why.</p>
+    <p>This guide works with the network off: every file it loads lives under <code>app/</code>. Your progress is stored only in this browser (localStorage) and can be exported to a file and imported back.</p>
+  </section>
+</main>
+
+<footer>
+  <p>Leonida Atlas — an unofficial, open-source guide. Grand Theft Auto and GTA are trademarks of Rockstar Games; this guide shows no Rockstar logo, artwork or game screenshots. Trophy names and descriptions are PlayStation&rsquo;s official text, shown as published.</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
