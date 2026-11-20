@@ -73,7 +73,6 @@ code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-si
   padding: 7px 12px;
   max-width: 560px;
   line-height: 1.4;
-  white-space: nowrap;
 }
 .totals { display: flex; gap: 8px; flex-wrap: wrap; }
 .total {
@@ -402,3 +401,15 @@ footer p { max-width: 1240px; margin: 0 auto; }
   .masthead h1 { font-size: 26px; }
   .audit-grid { grid-template-columns: 1fr 1fr; }
 }
+
+/* ---------- v3: 100% checklist, status badge, stage hours ---------- */
+.checklist100 { margin: 28px 0 0; }
+.checklist-table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+.checklist-table th, .checklist-table td { text-align: left; padding: 6px 10px; border-bottom: 1px solid var(--line); }
+.checklist-table th { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .04em; }
+.checklist-table td:first-child { font-weight: 700; }
+.checklist-need { color: var(--accent-soft); font-weight: 700; white-space: nowrap; }
+.platinum-strip { margin: 12px 0 0; padding: 10px 12px; background: var(--panel-soft); border: 1px solid var(--line); border-radius: 8px; font-size: 13px; line-height: 1.5; }
+.detail-status { margin: 10px 0 0; padding: 8px 10px; background: color-mix(in srgb, var(--warn) 12%, transparent); border: 1px solid var(--warn); border-radius: 8px; font-size: 13px; line-height: 1.5; }
+.unconfirmed-tag { color: var(--warn); border-color: var(--warn); }
+.stage-hours { float: right; color: var(--accent-soft); font-size: 13px; font-weight: 700; }

@@ -14,7 +14,7 @@
       <h1>Leonida Atlas</h1>
       <p class="subtitle">The offline guide and tracker for all 55 GTA VI trophies — cited guides, roadmap, missable warnings.</p>
     </div>
-    <p class="audit-strip" aria-label="Guide audit">55/55 trophies &middot; 1P 2G 6S 46B &middot; 55 guides &middot; 127 cited sources &middot; 14 missable &middot; 0 online</p>
+    <p class="audit-strip" aria-label="Guide audit">55/55 trophies &middot; 1P 2G 6S 46B &middot; 1,000 Gamerscore &middot; 55 guides &middot; 197 citations &middot; 9 sources, 20 Nov 2026 &middot; 14 missable &middot; 0 online &middot; 4/10 &middot; ~200 h</p>
   </div>
   <div class="progress-wrap">
     <div class="progress-line"><span id="progressText">0 of 55 earned — 0%</span><span class="saved-inline" id="savedNote">Saves automatically in this browser</span><span id="progressDetail">Platinum: not yet</span></div>
@@ -33,6 +33,28 @@
           <option value="gold">Gold</option>
           <option value="silver">Silver</option>
           <option value="bronze">Bronze</option>
+        </select>
+      </label>
+      <label class="grade-box">Difficulty
+        <select id="difficulty">
+          <option value="all">Any difficulty</option>
+          <option value="1">1 — automatic</option>
+          <option value="2">2 — easy</option>
+          <option value="3">3 — moderate</option>
+          <option value="4">4 — long grind</option>
+          <option value="5">5 — the Platinum grind</option>
+        </select>
+      </label>
+      <label class="grade-box">Chapter
+        <select id="chapter">
+          <option value="all">Any chapter</option>
+          <option value="1">Chapter 1</option>
+          <option value="2">Chapter 2</option>
+          <option value="3">Chapter 3</option>
+          <option value="4">Chapter 4</option>
+          <option value="5">Chapter 5</option>
+          <option value="any">Any time</option>
+          <option value="post-story">After the story</option>
         </select>
       </label>
       <label class="state-box">Show
@@ -68,6 +90,7 @@
         <h2 id="detailName"></h2>
         <p class="detail-desc" id="detailDesc"></p>
         <p class="detail-meta" id="detailMeta"></p>
+        <p class="detail-status" id="detailStatus" hidden></p>
         <div class="detail-guide">
           <h3>Guide</h3>
           <p id="detailGuide"></p>
@@ -99,8 +122,18 @@
 
   <section class="roadmap" id="roadmap" aria-label="Roadmap to the Platinum">
     <h2>Roadmap to the Platinum — six stages</h2>
-    <p class="section-intro">Built from the official descriptions: which story chapters and missions, which collectibles and counts, in what order. Around 200–300 hours for the Platinum; no online trophies, no difficulty trophies, no mission medals — long, not hard.</p>
+    <p class="section-intro">Built from the official descriptions and PowerPyx&rsquo;s three-step roadmap: story first (60–80 hours), then the 100% checklist (about 100 hours), then Strangers &amp; Freaks and cleanup (about 10 hours). About 200 hours for the Platinum (PowerPyx), 250+ by Push Square&rsquo;s count; no online trophies, no difficulty trophies, no mission medals — long, not hard.</p>
     <ol class="stages" id="stages"></ol>
+  </section>
+
+  <section class="checklist100" id="checklist100" aria-label="100 percent completion checklist">
+    <h2>100% completion checklist — what A Long Road actually needs</h2>
+    <p class="section-intro">The checklist appears after the story, under Progress, then Stats, then 100% Completion — but progress made during the story already counts. PowerPyx calls it lenient, closer to 60% true completion: most rows ask for part of the total, not all of it.</p>
+    <table class="checklist-table">
+      <thead><tr><th>What counts</th><th>Needed</th><th>Of</th></tr></thead>
+      <tbody id="checklistBody"></tbody>
+    </table>
+    <p class="platinum-strip" id="platinumStrip"></p>
   </section>
 
   <section class="missable-watch" id="missable" aria-label="Missable watch list">
@@ -132,9 +165,11 @@
     <div class="audit-grid">
       <div class="audit-card"><strong>55 / 55</strong><span>official names verified against Exophase &amp; PSNProfiles</span></div>
       <div class="audit-card"><strong>55 / 55</strong><span>guides, each in our own words, each citing ≥1 named source</span></div>
-      <div class="audit-card"><strong>127</strong><span>citations across the 55 guides (47 named sources)</span></div>
+      <div class="audit-card"><strong>197</strong><span>citations across the 55 guides (9 named sources, checked 20 Nov 2026)</span></div>
+      <div class="audit-card"><strong>1,000</strong><span>Gamerscore across the 55 (Xbox), 1,350 PSN points — every trophy rated</span></div>
+      <div class="audit-card"><strong>5 + 1</strong><span>unconfirmed trophies flagged honestly, plus 1 reported lead (Personal Best)</span></div>
       <div class="audit-card"><strong>14 / 14</strong><span>missable &amp; time-sensitive trophies flagged, with a save strategy</span></div>
-      <div class="audit-card"><strong>55 / 55</strong><span>trophies covered by the six-stage roadmap</span></div>
+      <div class="audit-card"><strong>55 / 55</strong><span>trophies covered by the six-stage roadmap, each with difficulty, time and chapter</span></div>
       <div class="audit-card"><strong>0</strong><span>online trophies — the whole list is single-player</span></div>
     </div>
     <div class="counts-strip" id="countsStrip" aria-label="Counts the game tracks"></div>
@@ -143,7 +178,7 @@
 
   <section class="honesty" aria-label="About this guide">
     <h2>The list, honestly</h2>
-    <p>Names, descriptions and grades are PlayStation&rsquo;s official text, as listed by Exophase and PSNProfiles on 18 November 2026 and checked again against Push Square&rsquo;s launch-day guide on 19 November 2026: 1 Platinum, 2 Gold, 6 Silver, 46 Bronze; 28 hidden until earned; no online trophies. GTA VI launched 19 November 2026, so the guides are written from the official descriptions, Rockstar&rsquo;s trailers and launch-week reporting — in our own words, never copied — and each one cites its sources beside it. Where a step is still not confirmed in-game at launch, the guide says so instead of guessing: five trophies (In The Beginning…, Capital Offense, Personal Best, Bad Luck, I Guess, The Truth Is Out There) were still unconfirmed when PowerPyx and GTABase checked on 19 November — two now carry launch-day reports, three remain honest unknowns.</p>
+    <p>Names, descriptions and grades are PlayStation&rsquo;s official text, as listed by Exophase and PSNProfiles on 18 November 2026 and checked again against Push Square&rsquo;s launch-day guide on 19 November 2026 and the GTA Zone and Sixshore launch guides on 20 November 2026: 1 Platinum, 2 Gold, 6 Silver, 46 Bronze; 28 hidden until earned; no online trophies. GTA VI launched 19 November 2026, so the guides are written from the official descriptions, Rockstar&rsquo;s trailers and launch-week reporting — in our own words, never copied — and each one cites its sources beside it. Where a step is still not confirmed in-game at launch, the guide says so instead of guessing: five trophies (In The Beginning…, Capital Offense, Bad Luck, I Guess, The Truth Is Out There, Ten Pin) are still unconfirmed by every guide that has checked, and one more (Personal Best) carries a reported lead only — max out Strength for both Jason and Lucia.</p>
     <p>The one reported missable trophy is <strong>Positive Mental Attitude</strong>: Lucia&rsquo;s balcony meditation spot in Chapter 1 disappears after that chapter, and the game has no mission replay. Keep a manual save at the start of every chapter. The other 13 flags are time-sensitive (a partner, a one-off event, a strand that can lock) and each note says why.</p>
     <p>This guide works with the network off: every file it loads lives under <code>app/</code>. Your progress is stored only in this browser (localStorage) and can be exported to a file and imported back.</p>
   </section>

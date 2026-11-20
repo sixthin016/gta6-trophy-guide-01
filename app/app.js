@@ -21,6 +21,8 @@ const state = {
   spoiler: false,
   kind: 'all',
   grade: 'all',
+  difficulty: 'all',
+  chapter: 'all',
   show: 'all',
   query: '',
   selected: null,
@@ -61,6 +63,8 @@ function matchesFilters(trophy) {
     return false;
   }
   if (state.grade !== 'all' && trophy.grade !== state.grade) return false;
+  if (state.difficulty !== 'all' && String(trophy.difficulty) !== state.difficulty) return false;
+  if (state.chapter !== 'all' && String(trophy.chapter) !== state.chapter) return false;
   if (state.show === 'earned' && !state.earned.has(trophy.id)) return false;
   if (state.show === 'missing' && state.earned.has(trophy.id)) return false;
   if (state.query) {
@@ -234,6 +238,9 @@ function renderSourcesAudit() {
     ['8', 'garages'], ['397', 'stunts in the game'], ['18', 'card sets'],
     ['80', 'challenges'], ['100', 'WAiNK spots'], ['250', 'stunts for the trophy'],
     ['100', 'vehicles to discover'], ['500', 'choices'], ['$250,000', 'marked bills to launder'],
+    ['200/277', 'vehicles for 100%'], ['100/255', 'animals for 100%'], ['50/66', 'weapons for 100%'],
+    ['70/80', 'challenges for 100%'], ['300', 'stunts for 100%'], ['15/18', 'card sets for 100%'],
+    ['100', 'optional missions for 100%'], ['61', 'cheats (after the story)'],
   ];
   for (const [num, label] of counts) {
     const chip = document.createElement('span');
@@ -241,6 +248,26 @@ function renderSourcesAudit() {
     chip.innerHTML = `<strong>${escapeHtml(num)}</strong> ${escapeHtml(label)}`;
     strip.appendChild(chip);
   }
+}
+
+function renderChecklist100() {
+  const body = $('checklistBody');
+  if (!body) return;
+  body.innerHTML = '';
+  for (const row of state.data.checklist100 || []) {
+    const tr = document.createElement('tr');
+    const item = document.createElement('td');
+    item.textContent = row.item;
+    const need = document.createElement('td');
+    need.className = 'checklist-need';
+    need.textContent = row.need;
+    const of = document.createElement('td');
+    of.textContent = row.of;
+    tr.append(item, need, of);
+    body.appendChild(tr);
+  }
+  const p = state.data.platinum || {};
+  $('platinumStrip').textContent = `Platinum: difficulty ${p.difficulty || '4/10'} · ${p.time || ''} · ${p.playthroughs || 1} playthrough · ${p.saves || ''} · ${p.cheats || ''} · ${p.noReplay || ''}`;
 }
 
 function renderRoadmap() {
@@ -254,7 +281,7 @@ function renderRoadmap() {
       const earned = state.earned.has(id);
       return `<button type="button" class="stage-trophy${earned ? ' earned' : ''}" data-trophy="${id}">${escapeHtml(t ? t.name : `#${id}`)}</button>`;
     }).join('');
-    li.innerHTML = `<h3><span class="stage-num">Stage ${stage.stage}</span>${escapeHtml(stage.title)}</h3>`
+    li.innerHTML = `<h3><span class="stage-num">Stage ${stage.stage}</span>${escapeHtml(stage.title)} <span class="stage-hours">${escapeHtml(stage.hours || '')}</span></h3>`
       + `<p>${escapeHtml(stage.advice)}</p><div class="stage-trophies">${chips}</div>`;
     list.appendChild(li);
   }
@@ -287,6 +314,9 @@ function renderChecklist() {
     const tags = [`<span class="tag">${escapeHtml(trophy.kind)}</span>`];
     if (trophy.hidden) tags.push('<span class="tag hidden-tag">Hidden on PSN</span>');
     if (trophy.missable) tags.push('<span class="tag missable">Missable</span>');
+    if (trophy.status === 'unconfirmed') tags.push('<span class="tag unconfirmed-tag">Unconfirmed</span>');
+    if (trophy.status === 'lead') tags.push('<span class="tag unconfirmed-tag">Lead only</span>');
+    if (/^[1-5]$/.test(String(trophy.chapter))) tags.push(`<span class="tag">Ch ${trophy.chapter}</span>`);
     if (trophy.count) tags.push(`<span class="tag count-tag">0–${formatCount(trophy.count)}</span>`);
     li.innerHTML = `<input type="checkbox" ${earned ? 'checked' : ''} aria-label="Mark ${escapeHtml(name)} earned">`
       + `<div><div class="trophy-name">${escapeHtml(name)} <span class="trophy-tags">${tags.join('')}</span></div>`
@@ -327,7 +357,21 @@ function renderDetail() {
   const meta = [`Stage ${trophy.stage} of the roadmap`];
   if (trophy.hidden) meta.push('Hidden on PlayStation until earned');
   if (trophy.count) meta.push(`PSN tracks a count to ${formatCount(trophy.count)}`);
+  meta.push(`${trophy.gamerscore} Gamerscore`);
+  meta.push(`Difficulty ${trophy.difficulty}/5`);
+  meta.push(`About ${trophy.time}`);
+  meta.push(/^[1-5]$/.test(String(trophy.chapter)) ? `Chapter ${trophy.chapter}` : trophy.chapter === 'post-story' ? 'After the story' : 'Any time');
   $('detailMeta').textContent = meta.join(' · ');
+  const status = $('detailStatus');
+  if (trophy.status === 'unconfirmed') {
+    status.hidden = false;
+    status.textContent = '⚠ Unconfirmed — no guide has verified the trigger yet. Do not grind this one until launch-week reports confirm it.';
+  } else if (trophy.status === 'lead') {
+    status.hidden = false;
+    status.textContent = '⚠ Reported lead only — the trigger is not confirmed yet. Treat the guide below as the best current report, not a verified method.';
+  } else {
+    status.hidden = true;
+  }
   const missable = $('detailMissable');
   if (trophy.missable && trophy.missableNote) {
     missable.hidden = false;
@@ -385,6 +429,7 @@ function renderDetail() {
 function renderAll() {
   updateProgressBar();
   renderRoadmap();
+  renderChecklist100();
   renderMissableWatch();
   renderSourcesAudit();
   renderChecklist();
@@ -425,6 +470,8 @@ function selectTrophy(id) {
 function syncControls() {
   $('spoiler').checked = state.spoiler;
   $('grade').value = state.grade;
+  $('difficulty').value = state.difficulty;
+  $('chapter').value = state.chapter;
   $('state').value = state.show;
   $('search').value = state.query;
   buildKindChips();
@@ -473,6 +520,14 @@ function bindControls() {
   });
   $('grade').addEventListener('change', (event) => {
     state.grade = event.target.value;
+    renderChecklist();
+  });
+  $('difficulty').addEventListener('change', (event) => {
+    state.difficulty = event.target.value;
+    renderChecklist();
+  });
+  $('chapter').addEventListener('change', (event) => {
+    state.chapter = event.target.value;
     renderChecklist();
   });
   $('state').addEventListener('change', (event) => {
