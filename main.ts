@@ -1,9 +1,7 @@
-/* Leonida Atlas — entry program for make.fun gta6-trophy-guide-01.
-   Copies app/ and screenshots/ from beside this file into the output
-   directory, then asks the vendored dossier builder to write the
-   dossier for them. The output directory comes from the
-   MAKEFUN_OUTPUT_DIR environment variable, or /output when unset.
-   Standard library only; runs on Node 22+. */
+// Leonida Atlas — entry program for the gta6-trophy-guide-01 bounty.
+// Copies app/ and screenshots/ from beside this file into the output
+// directory, then builds dossier.json there with the kit's vendored
+// dossier builder. Node 22, standard library only.
 import { cp, mkdir, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -24,6 +22,6 @@ await mkdir(outDir, { recursive: true });
 await cp(join(repoRoot, "app"), join(outDir, "app"), { recursive: true });
 await cp(join(repoRoot, "screenshots"), join(outDir, "screenshots"), { recursive: true });
 
-const dossier = await buildDossier(outDir, caps);
-await writeFile(join(outDir, "dossier.json"), dossier);
-console.log("wrote " + join(outDir, "dossier.json"));
+const dossierBytes = await buildDossier(outDir, caps);
+await writeFile(join(outDir, "dossier.json"), dossierBytes);
+console.log("wrote " + join(outDir, "dossier.json") + " (" + dossierBytes.length + " bytes)");
